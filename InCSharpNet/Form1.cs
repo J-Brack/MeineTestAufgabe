@@ -21,7 +21,6 @@ namespace InCSharpNet
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             string aText = textBoxA.Text;
             string bText = textBoxB.Text;
             string cText = textBoxC.Text;
@@ -182,7 +181,6 @@ namespace InCSharpNet
                     textBoxB.Text = B.ToString();
                     textBoxC.Text = C.ToString();
                 }
-                
             }
         }
         private void button2_Click(object sender, EventArgs e)
@@ -190,14 +188,18 @@ namespace InCSharpNet
 
             Point p1, p2;
             Pen myPen = new Pen(Color.Black, 1);
+
             p1 = new Point();
             p2 = new Point();
+
             p1.X = 500;
             p1.Y = 180;
             p2.X = 650;
             p2.Y = 180;
+
             float p3X = ((float)Math.Cos(A * (Math.PI / 180))) * 150;
             float p3Y = ((float)Math.Sin(A * (Math.PI / 180))) * 150;
+
             Graphics g = this.CreateGraphics();
             g.DrawLine(myPen, p1, p2);
             g.DrawLine(myPen, p1.X, p1.Y, p3X+p1.X, -p3Y+p1.Y);
