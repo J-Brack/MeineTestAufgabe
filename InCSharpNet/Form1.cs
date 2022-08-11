@@ -11,7 +11,7 @@ namespace InCSharpNet
             InitializeComponent();
         }
 
-        public float A = 1;
+        public float A = 0;
         public float B = 0;
         public float C = 0;
         public float D = 0;
@@ -70,7 +70,7 @@ namespace InCSharpNet
                 labelWarning2.Visible = true;
             }
 
-            if (A > 0 && A < 360)
+            if (A >= 0 && A <= 360)
             {
                 labelWarning2.Visible = false;
             }
@@ -80,7 +80,7 @@ namespace InCSharpNet
                 labelWarning1.Visible = true;
             }
 
-            if (valueCounter == 2 && A > 0 && A < 360)
+            if (valueCounter == 2 && (A >= 0 && A <= 360))
             {
                 button2.Visible = true;
                 labelWarning1.Visible = false;
@@ -185,7 +185,6 @@ namespace InCSharpNet
         }
         private void button2_Click(object sender, EventArgs e)
         {
-
             Point p1, p2;
             Pen myPen = new Pen(Color.Black, 1);
 
